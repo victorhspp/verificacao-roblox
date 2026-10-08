@@ -345,3 +345,287 @@ p {
     display: inline-block;
     margin-top: 30px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #07080b;
+    --card: rgba(17, 19, 25, 0.88);
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #ffffff;
+    --muted: #9299a8;
+    --success: #42d392;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(66, 211, 146, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(88, 101, 242, 0.08),
+            transparent 30%
+        );
+
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 24px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    padding: 42px 38px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.5),
+        inset 0 1px rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(20px);
+
+    animation: appear 0.5s ease;
+}
+
+.success-icon {
+    width: 74px;
+    height: 74px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(66, 211, 146, 0.10);
+
+    border: 1px solid rgba(66, 211, 146, 0.25);
+
+    box-shadow:
+        0 0 45px rgba(66, 211, 146, 0.12);
+}
+
+.success-icon span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--success);
+
+    color: #07120d;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 25px rgba(66, 211, 146, 0.25);
+}
+
+.status {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    background: rgba(66, 211, 146, 0.08);
+
+    color: var(--success);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    margin-top: 16px;
+
+    font-size: 29px;
+
+    letter-spacing: -0.8px;
+}
+
+.description {
+    max-width: 370px;
+
+    margin: 12px auto 28px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.verified-box {
+    display: flex;
+    align-items: center;
+
+    padding: 14px;
+
+    text-align: left;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #5865f2;
+
+    font-weight: 800;
+}
+
+.user-info {
+    flex: 1;
+
+    margin-left: 12px;
+}
+
+.user-info .label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #656c7a;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.user-info strong {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.check {
+    color: var(--success);
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+.divider {
+    height: 1px;
+
+    margin: 27px 0 18px;
+
+    background: var(--border);
+}
+
+.security {
+    color: #666d7a;
+
+    font-size: 11px;
+}
+
+footer {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #4f5561;
+
+    font-size: 10px;
+
+    letter-spacing: 0.3px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 34px 24px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
