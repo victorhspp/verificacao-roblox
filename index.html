@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configurações | Verificação</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/png" href="logo_rblx.webp">
+</head>
+<body>
+    <div class="background"></div>
+    <main class="container">
+        <div class="card">
+            <div class="header">
+                <div class="logo">R</div>
+                <div>
+                    <h1>Configurações do Aplicativo</h1>
+                    <p>Informações e URLs oficiais do aplicativo.</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <section class="links">
+                <div class="link-box">
+                    <div class="icon">↗</div>
+                    <div class="content">
+                        <span class="label">Link de Entrada</span>
+                        <span class="description">
+                            URL utilizada para acessar ou iniciar o aplicativo.
+                        </span>
+                        <div class="url">
+                            <span id="entry-url">
+                                https://angra.github.io/
+                            </span>
+                            <button onclick="copyText('entry-url')">
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="link-box">
+                    <div class="icon">▣</div>
+                    <div class="content">
+                        <span class="label">URL da Política de Privacidade</span>
+                        <span class="description">
+                            Documento contendo as informações sobre privacidade e tratamento de dados.
+                        </span>
+                        <div class="url">
+                            <span id="privacy-url">
+                                https://angra.github.io/privacy
+                            </span>
+                            <button onclick="copyText('privacy-url')">
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="link-box">
+                    <div class="icon">§</div>
+                    <div class="content">
+                        <span class="label">URL dos Termos de Serviço</span>
+                        <span class="description">
+                            Termos e condições aplicáveis ao uso do aplicativo.
+                        </span>
+                        <div class="url">
+                            <span id="terms-url">
+                                https://angra.github.io/terms
+                            </span>
+                            <button onclick="copyText('terms-url')">
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer">
+                <span>© 2026 — Todos os direitos reservados.</span>
+                <span class="secure">● Conexão segura</span>
+            </div>
+        </div>
+    </main>
+    <div id="toast">
+        URL copiada!
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
